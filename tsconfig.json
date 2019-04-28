@@ -4,7 +4,7 @@
   ],
   "compilerOptions": { // this is an object
       "removeComments": true,
-      "target": "es2015",
+      "target": "es5",
       "outDir": "scripts",
       //"outFile": "code.js",
       "watch": true
