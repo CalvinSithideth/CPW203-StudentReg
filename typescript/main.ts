@@ -52,10 +52,19 @@ function displayStudent(stu:Student):void {
     // <li>J. Doe</li>
     studentLI.innerText = stu.firstName + " " + stu.lastName;
 
+    // remove list when clicked
+    studentLI.onclick = function(){
+        let agree = confirm("Are you sure you want to delete?");
+        if (agree) {
+            let currItem = <HTMLLIElement>this;
+            currItem.remove();    
+        }
+    }
+
     // getting <ul> and appending the new <li>
     let list = document.querySelector("#roster > ul");
     list.appendChild(studentLI);
 
-    
+
 
 }
