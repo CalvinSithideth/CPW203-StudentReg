@@ -28,8 +28,35 @@ window.onload = function() {
 }
 
 function registerStudent() {
-    let nextStudent:Student = getStudent();
-    displayStudent(nextStudent);
+    if (isValid()) {
+        let nextStudent:Student = getStudent();
+        displayStudent(nextStudent);
+    }
+}
+
+function isValid() {
+    // Validate all required elements
+    let reqElems = document.querySelectorAll("main > input[data-required]")
+
+    let valid = true;
+
+    for (let i = 0; i < reqElems.length; i++) {
+        let currInput = <HTMLInputElement> reqElems[i];
+        if (currInput.value.trim() == "") {
+            // disp err msg
+            let span = currInput.nextElementSibling;
+            let msg = span.getAttribute("data-msg");
+            span.innerHTML = msg;
+            valid = false;
+        }
+    }
+
+    return valid;
+
+    // for each element
+        // check if input is empty
+        // if true, display err in span and
+        // set boolean flag
 }
 
 /**

@@ -3,3 +3,54 @@ span[class=required] {
     color: red;
     font-style: italic;
 }
+
+header {
+    text-align: center;
+    background-color: purple;
+    color: white;
+    font-family: 'Share Tech Mono', monospace;
+    /*border-width: 1px;
+    border-style: solid;
+    border-color: darkgreen;*/
+    border: .2em solid darkgreen;
+    /*margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1.5em;*/
+    margin: 0px 0% 1.5em
+}
+
+main > label {
+    margin-right: 2em;
+    width: 12%;
+    display: inline-block;
+}
+
+main > input[type=text] {
+    padding: .4em;
+    border-radius: .5em;
+}
+
+main > button {
+    cursor: pointer;
+}
+
+main {
+    margin-left: 5%;
+}
+
+body {
+    margin: .75em 10%;
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        margin: 0px 3%;
+    }
+
+    header {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    
+}
